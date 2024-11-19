@@ -84,7 +84,7 @@ const AdminHome = () => {
         </Container>
       </Navbar>
 
-      <Box sx={{ width: '100%' }} className='signin'>
+      <Box sx={{ width: '100%' }} className='owner-home'>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             <Tab label="All Users" {...a11yProps(0)} />

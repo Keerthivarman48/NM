@@ -11,26 +11,45 @@ html,
 body {
    width: 100%;
    height: 100%;
-  
- 
 }
+
+body {
+   overflow: auto; /* Enable scrolling on the body */
+}
+
 ::-webkit-scrollbar {
    width: 0px;
-   background: transparent; /* make scrollbar transparent */
+   background: transparent; 
 }
 
-/* Existing styles */ 
-a { 
-   color: black; 
-   text-decoration: none; 
-   margin-right: 20px; 
-} 
+a {
+   color: black;
+   text-decoration: none;
+   margin-right: 20px;
+}
 
-/* New hover effect */ 
-a:hover { 
-   color: #007bff; 
-   text-shadow: 0 0 10px #007bff; 
-   transition: all 0.3s ease; 
+a:hover {
+   color: #007bff;
+   text-shadow: 0 0 10px #007bff;
+   transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand h2 {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: black;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link {
+   color: #fff;
+   margin-right: 1rem;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link:hover {
+   color: #007bff;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .App {
@@ -93,6 +112,11 @@ select {
 .card {
    margin-right: 20px;
    margin-bottom: 15px;
+   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+   backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+   border: none; /* Removes default card border */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+   border-radius: 15px; /* Rounds the corners of the card */
 }
 
 .card .card-body .card-title img {
@@ -113,7 +137,7 @@ select {
 }
 
 .message-window {
-   overflow-x: auto;
+   overflow-y: auto; /* Enable vertical scrolling */
    padding: 10px;
    width: 100%;
    max-height: 200px;
@@ -186,30 +210,41 @@ body::before {
    z-index: 1000; 
 }
 
-.navbar .navbar-brand h2 { 
-   font-size: 1.5rem; 
-   font-weight: bold; 
-   color: black; 
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
-}
-
-.navbar .nav-link { 
-   color: #fff; 
-   margin-right: 1rem; 
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
-}
-
-.navbar .nav-link:hover { 
-   color: #007bff; 
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
-}
-
 .center-container {
    display: flex;
    justify-content: center;
    align-items: center;
    height: 80vh;
 }
-.signin{
-   padding-top: 70px;
+
+.signin {
+   margin-top: 130px; /* Adds space above the card */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 70vh; /* Increases the height of the card */
+   background-color: rgba(255, 255, 255, 0.8); /* Light background color */
+   backdrop-filter: blur(10px); /* Slight blur effect */
+   border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   max-width: 600px; /* Slightly increases the maximum width of the card */
+   width: 100%; /* Ensures the card takes the full available width up to the max-width */
+   padding: 50px; /* Adds some padding inside the card */
+}
+
+/* Custom styles for the Owner Home component */ 
+.owner-home { 
+   display: flex; 
+   flex-direction: column; 
+   justify-content:first baseline; /* Align items to the center */
+   align-items: center; 
+   height: 70vh; /* Adjust the height to your preference */ 
+   background-color: rgba(255, 255, 255, 0.8); 
+   backdrop-filter: blur(10px); /* Slight blur effect */ 
+   border-radius: 15px; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   padding: 20px; 
+   width: 90%; /* Ensures the card takes the full available width up to the max-width */
+   max-width: 1200px; /* Sets the maximum width of the card */
+   margin: 150px auto 0 auto; /* Centers the card horizontally and adds space at the top */
 }

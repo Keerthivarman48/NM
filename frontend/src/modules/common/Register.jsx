@@ -70,7 +70,7 @@ const Register = () => {
       <Container component="main" className='signin'>
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 0,
             marginBottom: 4,
             display: 'flex',
             flexDirection: 'column',
